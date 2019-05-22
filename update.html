@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+        <a href="index.html" class="btn btn-primary mb-5 back"><- Back</a><br />
+
+    <table id="initForm" class="insertTable">
+        <tbody>
+            <tr>
+                <td>iNumber</td>
+                <td>:</td>
+                <td><input class="form-control entry" type="text" id="initKey" value="" placeholder="Enter iNumber to update"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><button class="btn btn-primary add" onclick="populateForm()">update</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="updateForm">
+            <table class="insertTable">
+                    <tbody>
+                        <tr>
+                            <td>Item Number</td>
+                            <td>:</td>
+                            <td><input class="form-control entry" type="text" id="inum" value="" placeholder="Enter item number"/ disabled></td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>:</td>
+                            <td><input class="form-control entry" type="text" id="name" value="" placeholder="Enter Name"/></td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td>:</td>
+                            <td><input class="form-control entry" type="text" id="desc" value="" placeholder="Enter Description" /></td>
+                        </tr>
+                        <tr>
+                            <td>Quantity</td>
+                            <td>:</td>
+                            <td><input class="form-control entry" type="text" id="quant" value=""  placeholder="Enter Quantity" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><button class="btn btn-primary add" onclick="saveUpdate()">save</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+    </div>
+
+    <script src="updateRecord.js"></script>
+</body>
+</html>

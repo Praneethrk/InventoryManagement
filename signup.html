@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Inventory manager</title>
+    <style>
+        #admin-signup, #user-signup{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <button id='justButton1' class='btn btn-primary mainBttn1' onclick='showAdminForm() '>Login as Admin</button>
+    <button id='justButton2' class='btn btn-primary mainBttn2' onclick='showUserForm()'>Login as User</button>
+
+    <table class="adminTable" id='admin-signup' >
+        <tbody >
+            <tr>
+                <td><label for='adminName'>Name</label></td>
+                <td><input class="form-control" type='text' id='adminName' /></td>
+            </tr>
+            <tr>
+                <td><label for='adminPassword'>Password</label></td>
+                <td><input class="form-control"  type='password' id='adminPassword' /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onclick='adminLogin()' class='btn btn-primary'>Login</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table class="adminTable" id='user-signup'>
+            <tbody>
+                <tr>
+                    <td><label for='userName'>Name</label></td>
+                    <td><input  class="form-control" type='text' id='userName' /></td>
+                </tr>
+                <tr>
+                    <td><label for='userPassword'>Password</label></td>
+                    <td><input class="form-control"  type='password' id='userPassword' /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button onclick='userLogin()' class='btn btn-primary'>Login</button></td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+
+<script>
+    function showAdminForm(){
+        document.getElementById('justButton1').style.display="none";
+        document.getElementById('justButton2').style.display="none";
+        document.getElementById('admin-signup').style.display="block";
+    }
+
+    function showUserForm(){
+        document.getElementById('justButton1').style.display="none";
+        document.getElementById('justButton2').style.display="none";
+        document.getElementById('user-signup').style.display="block";
+    }
+
+    function adminLogin(){
+        var uname = document.getElementById('adminName').value;
+        var pass = document.getElementById('adminPassword').value;
+
+        if((uname == 'admin') && (pass == 'admin')){
+            window.location.replace("index.html")
+        }else{
+            alert('Access Denied');
+            window.location.replace("signup.html")
+        }
+    }
+
+    function userLogin(){
+        var uname = document.getElementById('userName').value;
+        var pass = document.getElementById('userPassword').value;
+
+        if((uname == 'user') && (pass == 'user')){
+            window.location.replace("userOps.html")
+        }else{
+            alert('Access Denied');
+            window.location.replace("signup.html")
+        }
+    }
+</script>
+</html>

@@ -1,4 +1,7 @@
-function printRecords(){
+
+
+
+function printRequests(){
     const {PythonShell} = require("python-shell");
 
     var options = {
@@ -7,25 +10,25 @@ function printRecords(){
     }
 
     var data =""
-    var pyScript = new PythonShell('print.py', options);
+    var pyScript = new PythonShell('printRequest.py', options);
     pyScript.on('message', function(message){
         // console.log(message);
         if(message == "None"){
-            data += "<h3 class='display sorry'>No records yet!</h3>"
+            data += "<h3 class='display sorry'>No requests yet!</h3>"
         }else{
             records = message.split("$")
             temp = records.pop()
             // console.log(records)
-            data += "<table class='display table table-striped' id='mytable' border='1'><thead class='thead-dark'><tr><th>iNUMBER</th><th>NAME</th><th>DESCRIPTION</th><th>QUANTITY</th></tr></th><tbody>"
+            data += "<table class='display table table-striped' id='mytable' border='1'><thead class='thead-dark'><tr><th>iNUMBER</th><th>REQUESTED QUANTITY</th></tr></th><tbody>"
             records.forEach(record => {
                 items = record.split("|")
-                data += "<tr><td>"+items[0]+"</td><td>"+items[1]+"</td><td>"+items[2]+"</td><td>"+items[3]+"</td></tr>"
+                data += "<tr><td>"+items[0]+"</td><td>"+items[1]+"</td></tr>"
             });
             data += "</tbody></table>"
 
         }
        
-        document.getElementById('op').innerHTML = data;
+        document.getElementById('reqDiv').innerHTML = data;
         // console.log(message)
     });
 

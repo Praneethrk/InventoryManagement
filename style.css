@@ -8,11 +8,18 @@
 
 .bttn{
     display: block;
-    margin: 5% 20% 2% 20%;
+    margin: 2% 20% 2% 20%;
 }
 
 .insertTable{
     margin: 0 auto;
+}
+
+.adminTable{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 20%;
+    transform: translate(-50%, -50%);
 }
 
 .back{
@@ -28,6 +35,31 @@
     margin: 5% 5% 5% 5%;
 }
 
+.display{
+    width:60%;
+    margin: auto;
+}
+
+
+.mainBttn1{
+    display:block;
+    margin: 0 0 2% 45%;
+    padding: 2% 3% 2% 3%;
+    border-radius: 5%;
+}
+
+.mainBttn2{
+    display:block;
+    margin: 0 0 2% 45%;
+    padding: 2% 3% 2% 4%;
+    border-radius: 5%;
+}
+
 body{
     margin-top: 5%;
+}
+
+.reqBttn{
+    margin-top: 1%;
+    margin-left: 45%  ;
 }

@@ -3,7 +3,6 @@ import os
 path = os.getcwd() + "/logic/inventory.txt"
 
 inum = sys.argv[1]
-print(inum)
 found = False
 fhand = open(path, "r")
 records = fhand.read().split('$')

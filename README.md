@@ -2,9 +2,9 @@
 # fs-project
 
 # Login
-admin|name : admin |  pass: admin
+Admin || name : admin |  pass: admin
 
-User|name : user | pass : user
+User || name : user | pass : user
 
 
 electronJS: https://electronjs.org/
